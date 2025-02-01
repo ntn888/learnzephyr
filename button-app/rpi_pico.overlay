@@ -1,0 +1,14 @@
+/ {
+    gpio_keys {
+        compatible = "gpio-keys";
+        butn: butn {
+            label = "Key";
+            gpios = <&gpio0 4 GPIO_ACTIVE_LOW>;
+        };
+    };
+
+    aliases {
+        butn0 = &butn;
+    };
+};
+

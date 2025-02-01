@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.20.0)
+
+set(BOARD stm32_min_dev@blue)
+set(EXTRA_DTC_OVERLAY_FILE stm32_min_dev_blue.overlay)
+
+find_package(Zephyr)
+project(my_zephyr_app)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+target_sources(app PRIVATE src/main.c)
